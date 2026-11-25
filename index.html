@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bruma Café | Café de especialidad y obrador</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme {
+      --color-cafe-950: #211b18;
+      --color-cafe-900: #302720;
+      --color-cafe-700: #6f5140;
+      --color-cafe-500: #a87855;
+      --color-crema-50: #fcfaf6;
+      --color-crema-100: #f3ede3;
+      --color-crema-300: #dfd1bd;
+      --color-salvia-700: #536b55;
+      --color-salvia-300: #b9c7ae;
+      --font-display: "Playfair Display", Georgia, serif;
+      --font-sans: "DM Sans", system-ui, sans-serif;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-crema-50 text-cafe-950 font-sans antialiased">
+  <header class="sticky top-0 z-30 bg-crema-50/95 backdrop-blur border-b border-crema-300">
+    <nav class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+      <a href="#" class="font-display text-2xl font-bold tracking-tight">bruma<span class="text-cafe-500">.</span></a>
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#historia" class="nav-link">Nuestra esencia</a>
+        <a href="#experiencia" class="nav-link">Experiencia</a>
+        <a href="#menu" class="nav-link">Menú</a>
+        <a href="#visitanos" class="nav-link">Visítanos</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#visitanos" class="bg-cafe-900 hover:bg-cafe-700 text-white text-sm font-semibold px-4 py-2.5 rounded-full transition">Reservar</a>
+        <button id="menu-btn" class="md:hidden p-2 rounded-lg border border-crema-300" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+    <div id="menu-movil" class="hidden md:hidden flex-col gap-3 px-5 py-4 border-t border-crema-300 bg-crema-50 text-sm">
+      <a href="#historia">Nuestra esencia</a><a href="#experiencia">Experiencia</a><a href="#menu">Menú</a><a href="#visitanos">Visítanos</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="portada relative overflow-hidden">
+      <div class="portada-circulo" aria-hidden="true"></div>
+      <div class="max-w-6xl mx-auto px-5 pt-24 pb-24 md:pt-36 md:pb-36 relative">
+        <p class="eyebrow mb-6">CAFÉ DE ESPECIALIDAD · OBRADOR PROPIO</p>
+        <h1 class="font-display text-5xl sm:text-6xl md:text-7xl leading-tight max-w-3xl mb-7">Un buen día empieza <em class="text-cafe-500">despacio.</em></h1>
+        <p class="text-lg text-cafe-900/75 max-w-xl mb-9">Café de origen, bollería recién hecha y un rincón tranquilo en el que quedarse un rato más.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#menu" class="bg-cafe-900 hover:bg-cafe-700 text-white px-7 py-3.5 rounded-full font-semibold transition">Descubrir el menú</a>
+          <a href="#visitanos" class="border border-cafe-900/30 hover:bg-white/60 px-7 py-3.5 rounded-full font-semibold transition">Encontrar una mesa</a>
+        </div>
+      </div>
+      <div class="relative bg-cafe-900 text-crema-50">
+        <div class="max-w-6xl mx-auto px-5 py-4 grid sm:grid-cols-3 gap-2 text-sm text-crema-100/80">
+          <p>Lunes a sábado · 08:30–19:00</p><p class="sm:text-center">Plaza de las Flores 8 · Madrid</p><p class="sm:text-right">Tu pausa favorita</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="py-20 px-5 bg-crema-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="max-w-2xl mb-12">
+          <p class="eyebrow mb-3">HECHO CON CALMA</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Pequeños detalles, grandes mañanas</h2>
+          <p class="text-cafe-900/70 text-lg">En Bruma creemos que lo cotidiano también merece cuidado. Por eso seleccionamos cada ingrediente y preparamos todo sin prisas.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="feature-card"><span class="feature-icon">☕</span><h3 class="font-display text-xl font-bold mt-4 mb-2">Café con origen</h3><p class="text-sm leading-relaxed text-cafe-900/70">Trabajamos con pequeños productores y tostadores que respetan el carácter de cada cosecha.</p></article>
+          <article class="feature-card feature-dark"><span class="feature-icon">✳</span><h3 class="font-display text-xl font-bold mt-4 mb-2">Obrador diario</h3><p class="text-sm leading-relaxed text-crema-100/75">Horneamos cada mañana. Masas fermentadas lentamente, mantequilla de calidad y fruta de temporada.</p></article>
+          <article class="feature-card"><span class="feature-icon">♡</span><h3 class="font-display text-xl font-bold mt-4 mb-2">Un lugar para parar</h3><p class="text-sm leading-relaxed text-cafe-900/70">Mesas compartidas, luz natural y un ambiente pensado para conversar, leer o trabajar un rato.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia" class="py-20 px-5 bg-[#e9e1d5]">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="eyebrow mb-3">NUESTRA RECOMENDACIÓN</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-5">El desayuno Bruma</h2>
+          <p class="text-cafe-900/75 text-lg mb-6">Una forma sencilla de empezar el día: bebida caliente, algo recién salido del horno y zumo natural.</p>
+          <ul class="space-y-3 text-cafe-900/80"><li>✓ Café o té a elegir</li><li>✓ Tostada de masa madre o croissant artesanal</li><li>✓ Zumo de naranja recién exprimido</li></ul>
+        </div>
+        <div class="precio-panel rounded-3xl p-10 text-center">
+          <p class="uppercase tracking-[.2em] text-xs font-bold text-crema-100/70 mb-3">Disponible hasta las 12:00</p>
+          <h3 class="font-display text-3xl text-white font-bold mb-3">Desayuno Bruma</h3>
+          <p class="text-crema-100/70 mb-5">Un pequeño ritual para empezar bien</p>
+          <p class="font-display text-6xl text-white font-bold mb-7">12,50 €</p>
+          <a href="#visitanos" class="inline-block bg-crema-100 hover:bg-white text-cafe-950 font-semibold px-7 py-3 rounded-full transition">Reservar desayuno</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-20 px-5 bg-crema-100">
+      <div class="max-w-6xl mx-auto">
+        <p class="eyebrow text-center mb-3">PARA CADA MOMENTO</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-center mb-3">Nuestra carta</h2>
+        <p class="text-center text-cafe-900/65 mb-9">Productos preparados cada día en nuestro obrador</p>
+        <div id="tabs" class="flex flex-wrap justify-center gap-2 mb-10" role="tablist" aria-label="Categorías del menú">
+          <button class="tab" data-cat="todo" role="tab" aria-selected="true">Todo</button>
+          <button class="tab" data-cat="cafe" role="tab" aria-selected="false">Café y bebidas</button>
+          <button class="tab" data-cat="dulce" role="tab" aria-selected="false">Dulce</button>
+          <button class="tab" data-cat="salado" role="tab" aria-selected="false">Salado</button>
+        </div>
+        <div id="menu-grid" class="grid md:grid-cols-3 gap-5"></div>
+      </div>
+    </section>
+
+    <section class="py-20 px-5 bg-cafe-950 text-crema-50">
+      <div class="max-w-6xl mx-auto">
+        <p class="eyebrow mb-3">PALABRAS QUE NOS ANIMAN</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-10">La pausa que necesitabas</h2>
+        <div class="grid md:grid-cols-3 gap-5">
+          <figure class="review"><blockquote>“El café está buenísimo y los rollitos de canela son una locura. Se ha convertido en mi sitio favorito.”</blockquote><figcaption>— Paula G.</figcaption></figure>
+          <figure class="review"><blockquote>“Un local precioso y tranquilo. El personal es encantador y todo lo que probamos estaba recién hecho.”</blockquote><figcaption>— Marcos L.</figcaption></figure>
+          <figure class="review"><blockquote>“Perfecto para desayunar antes de trabajar. La tostada de aguacate y el flat white, imprescindibles.”</blockquote><figcaption>— Irene y Dani</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="visitanos" class="py-20 px-5 bg-crema-50">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+        <div>
+          <p class="eyebrow mb-3">TE GUARDAMOS UN SITIO</p>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Ven a vernos</h2>
+          <p class="text-cafe-900/70 text-lg mb-8 max-w-md">Reserva una mesa y disfruta de tu próxima pausa en Bruma.</p>
+          <dl class="space-y-5 text-sm">
+            <div class="info-line"><dt class="font-bold">Horario</dt><dd>Lunes a sábado, de 08:30 a 19:00. Domingos cerrado.</dd></div>
+            <div class="info-line"><dt class="font-bold">Dirección</dt><dd>Plaza de las Flores 8, Madrid</dd></div>
+            <div class="info-line"><dt class="font-bold">Grupos</dt><dd>Para grupos de más de 6 personas, contacta con nosotros.</dd></div>
+          </dl>
+        </div>
+        <form id="form-reserva" novalidate class="reservation-form space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div><label for="fecha" class="block text-sm font-semibold mb-1">Fecha</label><input type="date" id="fecha" required class="campo"><p class="error" data-error-for="fecha"></p></div>
+            <div><label for="personas" class="block text-sm font-semibold mb-1">Personas</label><select id="personas" class="campo"><option value="1">1 persona</option><option value="2" selected>2 personas</option><option value="3">3 personas</option><option value="4">4 personas</option><option value="6">6 personas</option></select></div>
+          </div>
+          <div><label for="hora" class="block text-sm font-semibold mb-1">Hora de llegada</label><select id="hora" class="campo"></select></div>
+          <div><label for="nombre" class="block text-sm font-semibold mb-1">Nombre y apellidos</label><input type="text" id="nombre" placeholder="Ej. Ana Martínez" required class="campo"><p class="error" data-error-for="nombre"></p></div>
+          <button type="submit" class="w-full bg-cafe-900 hover:bg-cafe-700 text-white font-semibold py-3.5 rounded-full transition">Solicitar reserva</button>
+          <p id="resultado" class="hidden text-sm rounded-lg px-4 py-3" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-cafe-950 text-crema-100/70 text-sm">
+    <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <a href="#" class="font-display text-2xl font-bold text-white">bruma<span class="text-cafe-500">.</span></a>
+      <p>Plaza de las Flores 8, Madrid · © 2026 Bruma Café</p>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
